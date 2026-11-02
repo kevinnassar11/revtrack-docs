@@ -56,13 +56,18 @@ personal data the app collects, why, who it is shared with, and what choices you
     <td>Only when you choose to upload them.</td>
   </tr>
   <tr>
+    <td>Cloud backup of your log</td>
+    <td>A private, compressed copy of your ride log, garage, fuel, expenses and document entries (including recorded ride routes), so you can get them back on a new or reset phone. Only your own account can read or change it.</td>
+    <td>In the background after you log something, and when you tap Back up now.</td>
+  </tr>
+  <tr>
     <td>Push notification token</td>
     <td>A Firebase Cloud Messaging device token, so we can notify you about activity relevant to you (for example, a friend beating your time on a track).</td>
     <td>On sign-in, and when the token is refreshed.</td>
   </tr>
   <tr>
     <td>Analytics and diagnostic data</td>
-    <td>App usage events, device model, OS version, and a resettable app-instance identifier, collected automatically by Google Firebase Analytics to help us understand usage and fix problems.</td>
+    <td>App usage events, device model, OS version, and a resettable app-instance identifier, collected automatically by Google Firebase Analytics to help us understand usage and fix problems. Crash and error reports (the error, the device model and OS version, and your account identifier, never your name or email) are collected by Google Firebase Crashlytics so we can fix crashes.</td>
     <td>While using the app.</td>
   </tr>
 </table>
@@ -73,11 +78,11 @@ personal data the app collects, why, who it is shared with, and what choices you
 operate the app:</p>
 
 <ul>
-  <li><strong>Google Firebase</strong> (Authentication, Cloud Messaging, Analytics) — account
-      authentication, push delivery, and usage analytics.
+  <li><strong>Google Firebase</strong> (Authentication, Cloud Messaging, Analytics, Crashlytics) — account
+      authentication, push delivery, usage analytics, and crash reports.
       <a href="https://firebase.google.com/support/privacy">Firebase privacy information</a>.</li>
   <li><strong>Supabase</strong> — our hosted database, which stores your account record, leaderboard
-      entries, follow relationships, per-track stats, and device tokens.
+      entries, follow relationships, per-track stats, device tokens, and your private cloud backup.
       <a href="https://supabase.com/privacy">Supabase privacy policy</a>.</li>
   <li><strong>Google Maps Platform</strong> — renders maps and ride routes; receives location data
       needed to display the map.
@@ -103,13 +108,15 @@ your precise location.</p>
 <h2>4. How long we keep data</h2>
 
 <p>We keep your account data for as long as your account exists. Ride routes and vehicle photos
-are stored on your device and are removed when you delete them or uninstall the app. Leaderboard
+are stored on your device and are removed when you delete them or uninstall the app. Your cloud
+backup is kept until your account is deleted and is replaced each time a new backup is made;
+uninstalling the app does not remove it, which is what lets a new phone restore it. Leaderboard
 and track-stat records are retained until your account is deleted.</p>
 
 <h2>5. Deleting your account and data</h2>
 
 <p>You can request deletion of your account and all associated data — your account record,
-leaderboard entries, follows, track stats, and device tokens — by emailing
+leaderboard entries, follows, track stats, device tokens, and cloud backup — by emailing
 <a href="mailto:arevtrack@gmail.com">arevtrack@gmail.com</a>. We will action the request within 30 days.</p>
 
 <h2>6. Your choices</h2>
